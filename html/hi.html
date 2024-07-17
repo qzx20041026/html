@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>好东西</title>
+  <!--
+css:
+  行内样式：写在标签的style属性中（不推荐）
+  内嵌样式：写在style标签中（可以写在页面任何位置，但通常约定写在head标签中）
+  外联样式：写在一个单独的.css文件中（需要通过link签在网页中引入）
+-->
+  <!--
+选择器：
+  元素选择器: 元素名称{
+  color: red
+  }
+  id选择器: #id属性值{
+  color: red;
+  }
+  类选择器: .class属性值{
+    color: red;
+  }
+-->
+  <style>
+    h1{
+      color: blue;
+      /*font-size字体大小*/
+      font-size: 30px;
+    }
+    a{
+      color: #222222;
+      text-decoration: none;
+    /* text-decoration文本修饰 none表示没有下划线*/
+    }
+    p{
+      /* text-indent 首行缩进*/
+      text-indent: 50px;
+      /*line-height行高*/
+      line-height: 30px;
+      /*text-align: right;       对齐方式*/
+    }
+    /*盒子模型*/
+    /*div{*/
+    /*  width: 200px;    !*width：内容宽度(px,像素;%,相对于交元素的百分比)*!*/
+    /*  height: 200px;   !*height：内容高度(px,像素;%,相对于交元素的百分比)*!*/
+    /*  box-sizing:border-box ;!*指定上面的高度和宽度为盒子的高度和宽度*!*/
+    /*  background-color: aquamarine;   !*背景色*!*/
+    /*  padding: 20px 20px 20px 20px;          !*内边距  上     右     下       左*!*/
+    /*  border: 10px solid red;          !*边框  线条类型     颜色*!*/
+    /*  margin: 20px 20px 20px 20px;        !*外边距  上     右     下       左*!*/
+    /*}*/
+    #qzx{
+      width: 65%;
+      margin: 0 auto ;
+    }
+  </style>
+</head>
+<body>
+<div id="qzx">
+  <!--
+  在HTML中无论输入多少个空格，只会显示一个。可以使用空格占位符 &nbsp
+  -->
+  <h1>Han1me</h1>
+<!--
+img标签：
+  src：图片资源路径
+    width：宽度(px,像素;%,相对于交元素的百分比)
+    height：高度(px,像素;%,相对于交元素的百分比)
+  路径书写方式：
+    绝对路径：
+    1.绝对磁盘路径：C:\Users\Administrator\Desktop\HTML\img\news_logo.png
+    2.绝对网络路径：https://i2.sinaimg.cn/dy/deco/2012/0613/yocc20120613img01/news_1ogo.png
+    <img src="https://i2.sinaimg.cn/dy/deco/2012/0613/yocc20120613img01/news _1ogo.png">
+  相对路径：
+ -->
+  <img src="https://ts1.cn.mm.bing.net/th/id/R-C.9de53f9726576696b318a8d95c0946cb?rik=sWB3V9KSxHbThw&riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f95%2f9995_1.jpg&ehk=GcPUjJED69TBvg9XxQr2klzDzfRsQWhAfLKlIAUWHJQ%3d&risl=&pid=ImgRaw&r=0" width="50%">
+<!--
+  <p>段落
+  换行<br>
+  -->
+<!--
+ 文本加粗  <b>或者<strong>   <strong> 具有强调意义
+ -->
+  <br><a href="https://github.com/YenalyLiew/Han1meViewer" target="_blank">点这</a>
+<!--
+<a>    超链接，target属性：_self代表在当前页面打开（默认）;_blank表示在新页面打开
+-->
+  <p>
+    <b>动漫软件</b>已在github上
+  </p>
+<!--  水平分割线    <hr>-->
+  <hr>
+  <span>要加速</span>
+  <hr>
+<!--
+<video></video>
+视频标签
+src 视频的url
+controls 显示播放控件
+ width 播放器宽度
+height 播放器高度
+-->
+<!--
+音频标签：<audio>
+src:规定音频的url
+controls：显示播放控件
+-->
+</div>
+</body>
+</html>
