@@ -2,14 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS</title>
-<!--  引入方式-->
-<!--  <script>-->
-<!--    alert("123")-->
-<!--  </script>-->
+  <title>事件</title>
+<!--事件有两种绑定方式-->
   <script src="../js/js.js"></script>
+
 </head>
 <body>
-
+<!--第一种方式-->
+<input type="button" id="1" value="事件绑定1" onclick=" f()">
+<input type="button" id="2" value="事件绑定2" onclick=" f()">
+<input type="button" class="qzx" value="事件绑定3">
+<textarea onkeydown="a()">请输入
+</textarea>
+<!--
+onclick  鼠标单击事件
+onblur    元素失去焦点
+ onfocus    元素获得焦点
+ onload      某个页面或图像被完成加载
+ onsubmit    当表单提交时触发该事件
+ onkeydown    某个键盘的键被按下
+ onmouseover    鼠标被移到某元素之上
+ onmouseout     鼠标从某元素移开
+-->
 </body>
 </html>
