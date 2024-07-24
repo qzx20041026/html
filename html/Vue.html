@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue</title>
+  <script src="../js/vue.js"></script>
+  <style>
+    a{
+      color: red;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<!--
+vue指令
+v-bind　　　为HTML标签绑定属性值，如设置href，css样式等
+v-model      在表单元素上创建双向数据绑定
+v-on      为HTML标签绑定事件
+v-if/v-else-if/v-else    条件性的渲染某元素，判定为true时渲染，否则不渲染
+v-show           根据条件展示某元素，区别在于切换的是display属性的值
+v-for         列表渲染，遍历容器的元素或者对象的属性
+-->
+<body>
+<div id ="app" >
+<!-- v-bind 为HTML标签绑定属性值，如设置href，css样式等-->
+  <a v-bind:href="url"> 力扣</a> &nbsp
+  <a :href="url"> 力扣</a> <!-- 简写-->
+<!--v-model 在表单元素上创建双向数据绑定 -->
+  <input type="text" v-model:type="url">
+  {{ url }}
+  <br>
+<!-- v-on为HTML标签绑定事件    ；click 为事件行为 -->
+  <input type="button" v-on:click="h()" value="请点击">
+  <input type="button" @click="h()" value="请点击"> <!-- 简写-->
+
+<!--  v-if/v-else-if/v-else    条件性的渲染某元素，判定为true时渲染，否则不渲染-->
+  <input type="text" v-model="age">
+  <span v-if="age<=35">年轻人</span>
+  <span v-else-if="age>35&& age<60">中年人</span>
+  <span v-else>老年人</span>
+
+<!--  v-show           根据条件展示某元素，区别在于切换的是display属性的值-->
+  <input type="text" v-model="age">
+  <span v-show="age<=35">年轻人</span>
+
+<!--  v-for         列表渲染，遍历容器的元素或者对象的属性-->
+  <div v-for="addr in addrs">{{ addr }}</div><br>
+  <div v-for="(addr,index) in addrs">{{ index}}:{{ addr }}</div><!-- 该方法可显示索引  --><br>
+  <div v-for="(addr,index) in addrs">{{ index+1 }}:{{ addr }}</div><!-- 该方法可显示索引 ,索引可进行运算 -->
+
+</div>
+</body>
+<script>
+  const app= new Vue({
+    el:"#app",
+    data: {
+      url: "https://leetcode.cn/leetbook/",
+      age:"20",
+      addrs:["北京","上海","西安","成都","深圳"],
+    },
+
+    // 事件
+    methods:{
+      h:function (){
+        alert("hello")
+      }
+    },
+  })
+</script>
+</html>
